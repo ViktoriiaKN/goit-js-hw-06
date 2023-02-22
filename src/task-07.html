@@ -14,6 +14,14 @@
     <br />
     <span id="text">Abracadabra!</span>
 
-    <script src="js/task-07.js" type="module"></script>
+    <script src="js/task-07.js" type="module">
+      const input = document.querySelector('#font-size-control');
+        const text = document.querySelector('#text');
+
+        input.addEventListener('input', (event) => {
+          const size = event.currentTarget.value;
+          text.style.fontSize = `${size}px`;
+        });
+    </script>
   </body>
 </html>

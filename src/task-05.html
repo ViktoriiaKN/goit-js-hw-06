@@ -13,6 +13,17 @@
     <input type="text" id="name-input" placeholder="Please enter your name" />
     <h1>Hello, <span id="name-output">Anonymous</span>!</h1>
 
-    <script src="js/task-05.js" type="module"></script>
+    <script>
+      const input = document.getElementById("name-input");
+      const output = document.getElementById("name-output");
+
+      input.addEventListener("input", () => {
+        if (input.value === "") {
+          output.textContent = "Anonymous";
+        } else {
+          output.textContent = input.value;
+        }
+      });
+    </script>
   </body>
 </html>
